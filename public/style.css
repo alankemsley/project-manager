@@ -1,0 +1,16 @@
+/*GENERAL*/
+
+body {
+  color: #555;
+  background-color: #EFEFEF;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #444;
+  font-family: 'Francois One', sans-serif;
+}
+
+h6, p {
+  color: #555;
+  font-family: 'Open Sans', sans-serif;
+}
