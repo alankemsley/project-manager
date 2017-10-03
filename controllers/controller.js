@@ -5,20 +5,19 @@ var router = express.Router();
 
 // Routes
 router.get("/", function(req, res) {
-  project.all(function(data) {
+  project.selectAll(function(data) {
     var hbsObject = {
       projects: data
     };
-    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/", function(req, res) {
   project.create([
-    "project_name", "in_progress", "complete"
+    "project_name", "complete"
   ], [
-    req.body.name, req.body.in_progress, req.body.complete
+    req.body.project_name, req.body.complete
   ], function() {
     res.redirect("/");
   });
@@ -27,10 +26,10 @@ router.post("/", function(req, res) {
 router.put("/:id", function(req, res) {
   var status = "id = " + req.params.id;
 
-  console.log("Status", status);
+  console.log("status", status);
 
   project.update({
-    in_progress: req.body.in_progress
+    complete: req.body.complete
   }, status, function() {
     res.redirect("/");
   });

@@ -5,38 +5,20 @@
 
 <ul>
   {{#each projects}}
-    {{#unless this.in_progress || this.complete}}
+    {{#unless this.complete}}
       <li>
         {{this.project_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="in_progress" value="true">
-          <button type="submit">Begin</button>
+          <input type="hidden" name="complete" value="true">
+          <button type="submit">Done</button>
         </form>
       </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-{{!-- List 2: Projects in progress --}}
-<h2>In Progress</h2>
-
-<ul>
-  {{#each projects}}
-    {{#if this.in_progress}}
-      <li>
-        {{this.project_name}}
-
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="in_progress" value="false">
-          <button type="submit">Done</button>
-        </form>
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-{{!-- List 3: Projects completed --}}
+{{!-- List 2: Projects complete --}}
 <h2>Complete</h2>
 
 <ul>
@@ -54,8 +36,8 @@
 <form class="create-update-form" action="/" method="POST">
 
   <div class="form-group">
-    <label for="ca">Project Name:</label>
-    <input type="text" id="ca" name="name">
+    <label for="project">Project Name:</label>
+    <input type="text" id="project" name="project_name">
   </div>
 
   <button type="submit">Create</button>

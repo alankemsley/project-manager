@@ -2,19 +2,19 @@
 var orm = require("../config/orm.js");
 
 var project = {
-  all: function(cb) {
-    orm.all("project", function(res) {
+  selectAll: function(cb) {
+    orm.selectAll("projects", function(res) {
       cb(res);
     });
   },
   // The variables cols and vals are arrays
   create: function(cols, vals, cb) {
-    orm.create("project", cols, vals, function(res) {
+    orm.create("projects", cols, vals, function(res) {
       cb(res);
     });
   },
-  update: function(objColVals, condition, cb) {
-    orm.update("project", objColVals, condition, function(res) {
+  update: function(objColVals, status, cb) {
+    orm.update("projects", objColVals, status, function(res) {
       cb(res);
     });
   }

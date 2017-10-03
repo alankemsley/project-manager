@@ -6,8 +6,8 @@ USE projects_db;
 -- Create table
 CREATE TABLE projects (
   id INT NOT NULL AUTO_INCREMENT,
-  project_name VARCHAR(255),
-  in_progress TINYINT(0),
-  complete TINYINT(1),
+  project_name VARCHAR(255) NOT NULL,
+  complete BOOLEAN DEFAULT false,
+  DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
