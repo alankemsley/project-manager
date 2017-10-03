@@ -1,0 +1,26 @@
+{
+  "name": "project-manager",
+  "version": "1.0.0",
+  "description": "A web app that helps with project management.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alankemsley/project-manager.git"
+  },
+  "author": "Alan Kemsley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alankemsley/project-manager/issues"
+  },
+  "homepage": "https://github.com/alankemsley/project-manager#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.14.1"
+  }
+}
