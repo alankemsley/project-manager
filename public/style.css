@@ -1,16 +1,68 @@
-/*GENERAL*/
-
-body {
-  color: #555;
-  background-color: #EFEFEF;
+/* GENERAL */
+nav {
+  color: #fff;
+  background-color: #795548;
+  height: 130px;
 }
 
+body {
+  background-color: #fff59d;
+}
+
+main {
+  color: #666;
+  background-color: #fff59d;
+  font-size: 18px;
+}
+
+#row1 {
+  color: #fff;
+  background-color: #795548;
+  padding-bottom: 40px;
+}
+
+/* FONTS & COLORS */
 h1, h2, h3, h4, h5 {
-  color: #444;
-  font-family: 'Francois One', sans-serif;
+  color: #666;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
 }
 
 h6, p {
-  color: #555;
+  color: #666;
   font-family: 'Open Sans', sans-serif;
+  font-size: 24pt;
+}
+
+/* NAV */
+#logo-project {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+#logo-pro {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #fff59d;
+}
+
+/* ROW 1 */
+#create {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+#input input[type=text] {
+  border-bottom: 2px solid #efefef;
+  font-size: 22pt;
+}
+
+#input input[type=text]:focus + label {
+  color: #efefef;
+}
+
+#input input[type=text]:focus {
+  border-bottom: 2px solid #efefef;
+  box-shadow: 0 0 0 0;
+  font-size: 22pt;
 }
